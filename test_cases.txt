@@ -1,0 +1,46 @@
+1- Verificar que el sitio cargue correctamente.
+    Paso a seguir                                                       Resultado esperado
+    01. Ingresar al link https://www.saucedemo.com/.                    El título de la página se muestra en la parte superior y los campos de login cargan correctamente.
+
+2- Los campos de login se encuentran habilitados.
+    01. Clickear el campo username.                                     El campo es seleccionado.
+    02. Ingresar caracteres.                                            Los caracteres son mostrados en el campo.
+    03. Clickear el campo password.                                     El campo es seleccionado.
+    04. Ingresar caracteres.                                            Los caracteres son mostrados como * en el campo.
+
+3- Verificar que la contraseña esté cifrada.
+    01. Clickear el campo password.                                     El campo es seleccionado.
+    02. Ingresar caracteres.                                            Según el largo de la cadena ingresada, se muestran * en el campo.
+
+4- No es posible ingresar al inventario sin llenar los campos del login.
+    01. Dejar los campos de username y login vacíos.                    Ningún caracter es mostado en los campos.
+    02. Clickear el botón de "Login".                                   Un cartel con fondo rojo con el texto "Epic sadface: Username is required" en blanco es mostrado debajo del campo de password.
+
+5- No es posible ingresar al inventario sin llenar el campo username.
+    01. Dejar el campo username sin completar.                          No hay caracteres en el campo.
+    02. Ingresar "hola" en el campo password.                           Cuatro * son mostrados en el campo.
+    03. Clickear el botón de "Login".                                   Un cartel con fondo rojo con el texto "Epic sadface: Username is required" en blanco es mostrado debajo del campo de password.
+
+6- No es posible ingresar al inventario sin llenar el campo password.
+    01. Ingresar "hola" en el campo username.                           "hola" es mostrado en el campo.
+    02. No completar el campo password.                                 No se muestran caracteres en el campo.
+    03. Clickear el botón de "Login".                                   Un cartel con fondo rojo con el texto "Epic sadface: password is required" en blanco es mostrado debajo del campo de password.
+
+7- El login es exitoso cuando el usuario y contraseña son correctos.
+    01. Ingresar "standard_user" en el campo username.                  El nombre de usuario es mostrado en el campo.
+    02. Ingresar "secret_sauce" en el campo password.                   Los caracteres son mostrados como * en el campo.
+    03. Clickear el botón de "Login".                                   Redirección a otra página web. El inventario es mostado.
+
+8- Un usuario bloqueado no puede entrar al inventario.
+    01. Ingresar un usuario bloqueado en el campo username.             El nombre de usuario es mostrado en el campo. 
+    (Usuario bloqueado: "locked_out_user")
+    02. Ingresar contraseña valida. (Contraseña valida:                 Los caracteres son mostrados como * en el campo.
+    "secret_sauce").
+    03. Clickear el botón de "Login".                                   Un cartel con fondo rojo con el texto "Epic sadface: Sorry, this user has been locked out." en blanco es mostrado debajo del campo de password.
+
+9- Si el usuario tiene problemas, no puede ver el inventario como corresponde.
+    01. Ingresar un usuario con problemas de loggeo                     El nombre de usuario es mostrado en el campo.
+    (Usuario: "problem_user").
+    02. Ingresar una contraseña valida. (Contraseña:                    Los caracteres son mostrados como * en el campo.
+    "secret_sauce").
+    03. Clickear el botón de "Login".                                   Redirección a otra página web. El invertario muestra productos con fotos de un perrito.
