@@ -2,6 +2,7 @@ package com.crowdar.practica.steps;
 
 import com.crowdar.core.Injector;
 import com.crowdar.core.PageSteps;
+import com.crowdar.practica.pages.SwagLabsHomePage;
 import com.crowdar.practica.pages.SwagLabsLoginPage;
 import io.cucumber.java.en.*;
 import org.testng.Assert;
@@ -38,4 +39,7 @@ public class SwagLabsSteps extends PageSteps {
 
     @Then("Home page is not redirected. A message (.*) is shown.")
     public void notPossibleToLogin(String message) { Injector._page(SwagLabsLoginPage.class).validateErrorMessage(message); }
+
+    @Then("Home page is redirected.")
+    public void loginSuccessful() { Injector._page(SwagLabsHomePage.class).validateTittleIsVisible(); }
 }
