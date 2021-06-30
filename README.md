@@ -62,7 +62,7 @@ In this example, *SwagLabs* is the first web page the framework will interact wi
 |-------|----------------|
 |PageBaseSwagLabs.java    | Define base URL to navigate. |
 |SwagLabsLoginPage.java   | PageObject: between each element in the webpage *SwagLabsLoginPage* you want to interact with. You need to add one new file for each page you want to navigate in your tests. |
-|SwagLabsSteps.java   | StepOpject: Code to support the behaviour of each **step** coded into the feature files for the *GoogleHomePage* web page. This code executes the interaction between the Framework and the web application and match the steps with the code who run interactions. |
+|SwagLabsSteps.java   | StepOpject: Code to support the behaviour of each **step** coded into the feature files for the *SwagLabsLoginPage* web page. This code executes the interaction between the Framework and the web application and match the steps with the code who run interactions. |
 |swagLabsLoading.feature & swagLabs | Feature file: Definition of the **Test Scenarios** with all the **steps** written in Cucumber format (http)|
 
 # Getting started
