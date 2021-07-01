@@ -19,8 +19,8 @@ Feature: As an Swag Labs user, I need to have an user and password to enter to h
   Scenario Outline: User can not enter to home page if credentials are not correct.
     Given User is on Swag Labs page.
     When User enter an username <username>.
-    When User enter a password <password>.
-    When User click on Login button.
+    And User enter a password <password>.
+    And User click on Login button.
     Then Home page is not redirected. A message <message> is shown.
     Examples:
       | username        | password     | message                                                                   |
