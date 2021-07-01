@@ -23,11 +23,12 @@ Feature: As an Swag Labs user, I need to have an user and password to enter to h
     When User click on Login button.
     Then Home page is not redirected. A message <message> is shown.
     Examples:
-      | username | password | message                                                                   |
-      |          |          | Epic sadface: Username is required                                        |
-      | user     | 1234     | Epic sadface: Username and password do not match any user in this service |
-      | user     |          | Epic sadface: Password is required                                        |
-      |          | 1234     | Epic sadface: Username is required                                        |
+      | username        | password     | message                                                                   |
+      |                 |              | Epic sadface: Username is required                                        |
+      | user            | 1234         | Epic sadface: Username and password do not match any user in this service |
+      | user            |              | Epic sadface: Password is required                                        |
+      |                 | 1234         | Epic sadface: Username is required                                        |
+      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |
 
   @chiara @loginOk
   Scenario: User can enter to home page.
