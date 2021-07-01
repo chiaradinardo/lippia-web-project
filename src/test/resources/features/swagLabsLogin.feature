@@ -34,6 +34,6 @@ Feature: As an Swag Labs user, I need to have an user and password to enter to h
   Scenario: User can enter to home page.
     Given User is on Swag Labs page.
     When User enter an username standard_user.
-    When User enter a password secret_sauce.
-    When User click on Login button.
+    And User enter a password secret_sauce.
+    And User click on Login button.
     Then Home page is redirected.
