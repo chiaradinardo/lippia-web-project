@@ -1,14 +1,14 @@
 Feature: As an Swag Labs user, I need to have an user and password to enter to home page.
+Background:
+  Given User is on Swag Labs page.
 
   @chiara
   Scenario: User verify labels are enabled.
-    Given User is on Swag Labs page.
     When User sees labels on page.
     Then Labels are enabled to write.
 
   @chiara
   Scenario Outline: Password is hidden.
-    Given User is on Swag Labs page.
     When User enter a password <password>.
     Then Characters entered are hidden with *.
     Examples:
@@ -17,7 +17,6 @@ Feature: As an Swag Labs user, I need to have an user and password to enter to h
 
   @chiara @loginFailed
   Scenario Outline: User can not enter to home page if credentials are not correct.
-    Given User is on Swag Labs page.
     When User enter an username <username>.
     And User enter a password <password>.
     And User click on Login button.
@@ -32,7 +31,6 @@ Feature: As an Swag Labs user, I need to have an user and password to enter to h
 
   @chiara @loginOk
   Scenario: User can enter to home page.
-    Given User is on Swag Labs page.
     When User enter an username standard_user.
     And User enter a password secret_sauce.
     And User click on Login button.
