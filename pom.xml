@@ -24,6 +24,7 @@
         <crowdar.driver.capabilities.json_path>src/main/resources/browsers/chromeCapabilities.json</crowdar.driver.capabilities.json_path>
         <crowdar.cucumber.reporters>--plugin pretty </crowdar.cucumber.reporters>
         <crowdar.cucumber.option>src/test/resources/features --glue / --glue com/crowdar/bdd/cukes  --tags ${crowdar.cucumber.filter} --tags 'not @Ignore' --plugin pretty</crowdar.cucumber.option>
+        <crowdar.extent.report.path>AventReport</crowdar.extent.report.path>
     </properties>
     <profiles>
         <profile>
@@ -34,7 +35,7 @@
             <properties>
                 <crowdar.cucumber.browser>WEB_CHROME</crowdar.cucumber.browser>
                 <crowdar.json.path>src/test/resources/json/</crowdar.json.path>
-                <crowdar.cucumber.reporters>--plugin pretty -p 'html:target/cucumber-reports' </crowdar.cucumber.reporters>
+                <crowdar.cucumber.reporters>--plugin pretty --plugin com.crowdar.practica.report.CucumberReporter:</crowdar.cucumber.reporters>
             </properties>
         </profile>
         <profile>
@@ -93,6 +94,16 @@
             <artifactId>core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+         <dependency>
+             <groupId>io.lippia.report</groupId>
+             <artifactId>cucumber4-adapter</artifactId>
+             <version>1.7.1</version>
+         </dependency>
+         <dependency>
+             <groupId>com.crowdar.report</groupId>
+             <artifactId>extentreports-cucumber4-adapter</artifactId>
+             <version>1.1.0.8</version>
+         </dependency>
      </dependencies>
     <build>
         <filters>

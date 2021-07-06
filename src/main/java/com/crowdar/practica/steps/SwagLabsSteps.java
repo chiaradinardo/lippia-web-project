@@ -5,7 +5,6 @@ import com.crowdar.core.PageSteps;
 import com.crowdar.practica.pages.SwagLabsHomePage;
 import com.crowdar.practica.pages.SwagLabsLoginPage;
 import io.cucumber.java.en.*;
-import org.testng.Assert;
 
 public class SwagLabsSteps extends PageSteps {
 
